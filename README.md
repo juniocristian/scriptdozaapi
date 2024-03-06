@@ -39,7 +39,7 @@ Ao modificar gerenciamento de horários limpe as configurações anteriores prim
 
 Personalizações:</br>
 
-** Alterar Cor Primária: (#007aff)</br>
+** Alterar Cor Primária: (#2a6a5a)</br>
 /frontend/src/config.json</br>
 /frontend/src/App.js</br>
 /frontend/src/layout/index.js
