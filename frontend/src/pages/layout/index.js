@@ -51,11 +51,11 @@ const useStyles = makeStyles((theme) => ({
     },
     backgroundColor: theme.palette.fancyBackground,
     '& .MuiButton-outlinedPrimary': {
-      color: theme.mode === 'light' ? '#00bf63' : '#FFF',
+      color: theme.mode === 'light' ? '#00BF63' : '#FFF',
       border: theme.mode === 'light' ? '1px solid rgba(0 124 102)' : '1px solid rgba(255, 255, 255, 0.5)',
     },
     '& .MuiTab-textColorPrimary.Mui-selected': {
-      color: theme.mode === 'light' ? '#00bf63' : '#FFF',
+      color: theme.mode === 'light' ? '#00BF63' : '#FFF',
     }
   },
 
@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    fontSize: 16,
+    fontSize: 14,
   },
   drawerPaper: {
     position: "relative",
@@ -253,7 +253,7 @@ const LoggedInLayout = ({ children }) => {
         open={drawerOpen}
       >
         <div className={classes.toolbarIcon}>
-          <img src={logo} style={{ margin: "0 auto", width: "240px", height: "48px" }} alt="logo" />
+          <img src={logo} style={{ margin: "0 auto", height: "100%", width: "100%" }} alt="logo" />
           <IconButton onClick={() => setDrawerOpen(!drawerOpen)} style={{ color: "white" }}>
             <ChevronLeftIcon />
           </IconButton>
@@ -297,11 +297,11 @@ const LoggedInLayout = ({ children }) => {
           >
             {greaterThenSm && user?.profile === "admin" && user?.company?.dueDate ? (
               <>
-               Seja bem-vindo ao <b>{system.name}</b>!
+                Olá <b>{user.name}</b>, seja bem-vindo ao <b>{system.name}</b>! (Ativo até {dateToClient(user?.company?.dueDate)})
               </>
             ) : (
               <>
-                Olá <b>{user.name}</b>, seja bem-vindo!
+                Olá <b>{user.name}</b>, seja bem-vindo ao <b>{system.name}</b>!
               </>
             )}
           </Typography>

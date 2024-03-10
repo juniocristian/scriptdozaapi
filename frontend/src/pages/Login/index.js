@@ -122,9 +122,7 @@ const Login = () => {
             <div>
             <img src={chatImage} style={{width:'100%'}} alt={process.env.REACT_APP_TITLE} />
             </div>
-              <Typography component="h1" variant="h5">
-                {i18n.t("login.title")}
-              </Typography>
+              
               <form className={classes.form} noValidate onSubmit={handleSubmit}>
                 <TextField
                   variant="outlined"
@@ -173,17 +171,7 @@ const Login = () => {
                 >
                   {i18n.t("login.buttons.submit")}
                 </Button>
-                <Grid container justifyContent="flex-end">
-                  <Grid item>
-                    <Link
-                      variant="body2"
-                      component={RouterLink}
-                      to="/signup"
-                    >
-                      {i18n.t("login.buttons.register")}
-                    </Link>
-                  </Grid>
-                </Grid>
+                
               </form>
             </div>
           </Container>       

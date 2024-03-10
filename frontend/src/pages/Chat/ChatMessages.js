@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     padding: "20px",
+    background: "#eeeeee",
   },
   buttonSend: {
     margin: theme.spacing(1),
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 10px 5px",
     margin: "10px",
     position: "relative",
-    backgroundColor: "white",
+    backgroundColor: "#eeeeee",
     color: "#7f7f7f",
     maxWidth: 300,
     borderRadius: 10,
@@ -59,9 +60,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 10px 5px",
     margin: "10px 10px 10px auto",
     position: "relative",
-    backgroundColor: "#72A0C1",
+    backgroundColor: "#00BF63",
     color: "#fafafa",
-    textAlign: "right",
+    textAlign: "left",
     maxWidth: 300,
     borderRadius: 10,
     borderBottomRightRadius: 0,

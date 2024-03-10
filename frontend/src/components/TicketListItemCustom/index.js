@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     justifySelf: "flex-end",
     textAlign: "right",
     position: "relative",
-    top: -23,
+    top: -10,
     fontSize: 12
   },
 
@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     backgroundColor: green[500],
     right: 0,
-    top: 10
+    top: 20
   },
 
   acceptButton: {
@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
 
   ticketQueueColor: {
     flex: "none",
-    width: "8px",
+    width: "3px",
     height: "100%",
     position: "absolute",
     top: "0%",
@@ -244,7 +244,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
               height: 18,
               padding: 5,
               position: "inherit",
-              borderRadius: 7,
+              borderRadius: 20,
               color: '#fff',
               top: -6,
               marginRight: 3,
@@ -260,7 +260,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 height: 18,
                 padding: 5,
                 position: "inherit",
-                borderRadius: 7,
+                borderRadius: 20,
                 color: "white",
                 top: -6,
                 marginRight: 3
@@ -277,7 +277,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 height: 18,
                 padding: 5,
                 position: "inherit",
-                borderRadius: 7,
+                borderRadius: 20,
                 color: "white",
                 top: -6,
                 marginRight: 3
@@ -297,13 +297,13 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                   cursor: "pointer",
                   //margin: '0 5 0 5',
                   padding: 2,
-                  height: 23,
+                  height: 18,
                   width: 23,
                   fontSize: 12,
                   borderRadius: 50,
                   position: 'absolute',
                   right: 0,
-                  top: -8
+                  top: -5
                 }}
               />
             </Tooltip>
@@ -315,7 +315,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 fontSize="small"
                 style={{
                   padding: 2,
-                  height: 23,
+                  height: 18,
                   width: 23,
                   fontSize: 12,
                   color: '#fff',
@@ -323,8 +323,8 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                   backgroundColor: blue[700],
                   borderRadius: 50,
                   position: 'absolute',
-                  right: 28,
-                  top: -8
+                  right: 27,
+                  top: -5
                 }}
               />
             </Tooltip>
@@ -332,9 +332,9 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
           {ticket.chatbot && (
             <Tooltip title="Chatbot">
               <AndroidIcon
-                fontSize="small"
-                style={{ color: grey[700], marginRight: 5 }}
-              />
+  fontSize="small"
+  style={{ color: grey[700], marginRight: 5, display: 'none' }}
+/>
             </Tooltip>
           )}
 
@@ -353,7 +353,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 height: 18,
                 padding: 5,
                 position: "inherit",
-                borderRadius: 7,
+                borderRadius: 20,
                 color: "white",
                 top: -6,
                 marginRight: 3
@@ -371,7 +371,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 padding: 5,
                 paddingHorizontal: 12,
                 position: "inherit",
-                borderRadius: 7,
+                borderRadius: 20,
                 color: "white",
                 top: -6,
                 marginRight: 2
@@ -393,11 +393,11 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                   margin: '0 5 0 5',
                   padding: 2,
                   right: 48,
-                  height: 23,
+                  height: 18,
                   width: 23,
                   fontSize: 12,
                   borderRadius: 50,
-                  top: -8,
+                  top: -5,
                   position: 'absolute',
                 }}
               />
@@ -406,9 +406,9 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
           {ticket.chatbot && (
             <Tooltip title="Chatbot">
               <AndroidIcon
-                fontSize="small"
-                style={{ color: grey[700], marginRight: 5 }}
-              />
+  fontSize="small"
+  style={{ color: grey[700], marginRight: 5, display: 'none' }}
+/>
             </Tooltip>
           )}
           {ticket.status === "open" && (
@@ -438,12 +438,12 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                   cursor: "pointer",
                   //margin: '0 5 0 5',
                   padding: 2,
-                  height: 23,
+                  height: 18,
                   width: 23,
                   fontSize: 12,
                   borderRadius: 50,
-                  right: 25,
-                  top: -8,
+                  right: 26.5,
+                  top: -5,
                   position: 'absolute',
                 }}
               />
@@ -457,7 +457,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 fontSize="small"
                 style={{
                   padding: 2,
-                  height: 23,
+                  height: 18,
                   width: 23,
                   fontSize: 12,
                   color: '#fff',
@@ -465,7 +465,7 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                   backgroundColor: blue[700],
                   borderRadius: 50,
                   right: 0,
-                  top: -8,
+                  top: -5,
                   position: 'absolute',
                 }}
               />
@@ -560,9 +560,9 @@ const TicketListItemCustom = ({ ticket, setUpdate }) => {
                 height: 18,
                 padding: 5,
                 paddingHorizontal: 12,
-                borderRadius: 7,
+                borderRadius: 20,
                 color: "white",
-                top: -28,
+                top: -10,
                 marginRight: 5
 
               }}

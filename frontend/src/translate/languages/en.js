@@ -246,7 +246,7 @@ const messages = {
 			},
 			mainDrawer: {
 				listItems: {
-					dashboard: "Dashboard",
+					dashboard: "Monitoramento",
 					connections: "Connections",
 					tickets: "Tickets",
 					todolist: "to-Do List",

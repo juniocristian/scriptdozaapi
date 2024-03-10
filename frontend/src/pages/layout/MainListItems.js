@@ -256,7 +256,7 @@ const MainListItems = (props) => {
         yes={() => (
           <ListItemLink
             to="/"
-            primary="Monitoramento"
+            primary="Dashboard"
             icon={<PieChartOutlinedIcon />}
           />
         )}
@@ -274,12 +274,47 @@ const MainListItems = (props) => {
         icon={<EventIcon />}
       />
 
-      
-        <ListItemLink
-        to="/kanban"
-        primary={i18n.t("mainDrawer.listItems.kanban")}
-        icon={<LoyaltyRounded />}
-      />
+      <ListItem
+        dense
+        button
+        onClick={() => setOpenKanbanSubmenu((prev) => !prev)}
+      >
+        <ListItemIcon>
+          <LoyaltyRounded />
+        </ListItemIcon>
+        <ListItemText
+          primary={i18n.t("mainDrawer.listItems.kanban")}
+        />
+        {openKanbanSubmenu ? (
+          <ExpandLessIcon />
+        ) : (
+          <ExpandMoreIcon />
+        )}
+      </ListItem>
+      <Collapse
+        style={{ paddingLeft: 15 }}
+        in={openKanbanSubmenu}
+        timeout="auto"
+        unmountOnExit
+      >
+        <List dense component="div" disablePadding>
+          <ListItem onClick={() => history.push("/kanban")} button>
+            <ListItemIcon>
+              <ListIcon />
+            </ListItemIcon>
+            <ListItemText primary={i18n.t("kanban.subMenus.list")} />
+          </ListItem>
+          <ListItem
+            onClick={() => history.push("/tagsKanban")}
+            button
+          >
+            <ListItemIcon>
+              <CalendarToday />
+            </ListItemIcon>
+            <ListItemText primary={i18n.t("kanban.subMenus.tags")} />
+          </ListItem>
+        </List>
+      </Collapse>
 
       <ListItemLink
         to="/quick-messages"
@@ -299,7 +334,12 @@ const MainListItems = (props) => {
         icon={<EventAvailableOutlinedIcon />}
       />
       
-      
+      <ListItemLink
+        to="/tags"
+        primary={i18n.t("mainDrawer.listItems.tags")}
+        icon={<LocalOfferOutlinedIcon />}
+      />
+
       <ListItemLink
         to="/chats"
         primary={i18n.t("mainDrawer.listItems.chats")}
@@ -310,7 +350,12 @@ const MainListItems = (props) => {
         }
       />
 
-      
+      <ListItemLink
+        to="/helps"
+        primary={i18n.t("mainDrawer.listItems.helps")}
+        icon={<HelpOutlineOutlinedIcon />}
+      />
+
       <Can
         role={user.profile}
         perform="drawer-admin-items:view"

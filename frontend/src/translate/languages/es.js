@@ -250,7 +250,7 @@ const messages = {
 			},
 			mainDrawer: {
 				listItems: {
-					dashboard: "Dashboard",
+					dashboard: "Monitoramento",
 					connections: "Conexiones",
 					tickets: "Tickets",
 					todolist: "Tareas",
